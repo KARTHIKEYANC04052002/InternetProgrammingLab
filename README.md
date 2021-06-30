@@ -8,3 +8,11 @@
   * External CSS
   * Internal CSS
   * Inline CSS
+### Included CSS properties like,
+  * Background color
+  * Background image
+  * Text properties
+  * Font Styles
+  * Transition effects
+  * Margin properties
+  * Column split (multiple columns)
