@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="assets\styles\style.css">
+      <style>
+		body {
+			background: cyan;
+			background-image: url("https://img.wallpapersafari.com/desktop/1680/1050/37/18/17U0Qg.jpg");
+			background-repeat: y-axis;
+			background-size: 100%;
+		}
+
+		.column_split {
+			column-count: 3;
+			column-gap: 50px;
+			column-rule: 10px groove #ff11ff;
+			color: #654321;
+			font-weight: bold;
+			margin: 30px;
+			padding: 10px;
+		}
+
+		h1 {
+			color: #991199;
+			font-family: Algerian;
+			font-size: 300%;
+			margin: 50px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		h2 {
+			color: #996699;
+			font-family: Algerian;
+			font-size: 200%;
+			margin: 50px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		p {
+			color: green;
+			font-family: calibri;
+			font-size: 150%;
+			margin: 25px 25px;
+		}
+
+		.internal {
+			color: orange;
+		}
+
+		.square {
+			width: 100px;
+			height: 45px;
+			background: white;
+			color: black;
+			transition: width 4s, background 4s, color 4s;
+			font-size: 200%;
+			margin-left: 50px;
+			padding: 6px 0px 0px 10px;
+			border-left: 5px solid blue;
+			border-right: 5px solid blue;
+			overflow: hidden;
+		}
+
+		.square:hover {
+			width: 500px;
+			background: black;
+			color: white;
+		}
+      </style>
+   </head>
+   <body>
+      <h1>Internet Programming Lab</h1>
+      <h2>CSS Properties</h2>
+      <p class="external">Demo for CSS Using External Style Sheet</p>
+      <p class="internal">Demo for CSS Using Internal Style</p>
+      <p style="color:red; text-shadow: 1px 1px #000000; font-size:160%;">Demo for CSS Using Inline Style</p>
+      <div class="square">DEMO FOR TRANSITION EFFECT</div>
+      <div class="column_split">Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) Demo for Column Split (Multiple Columns) </div>
+   </body>
+</html>
