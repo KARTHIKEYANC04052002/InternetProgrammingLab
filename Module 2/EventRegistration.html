@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/styles/styles.css">
+		<script src="assets/scripts/script.js"></script>
+	</head>
+	<body>
+		<form name = "forms1" action="registered.html"  method="post">
+			<div class="container">
+				<h1 style="text-align:center; font-family:algerian; font-size:3em;" class="glow">STAR LIGHTS MUSIC EVENT</h1>
+				<h3 style="text-align:center;">REGISTER NOW FOR THE GRAND MUSIC EVENT</h3>
+				<hr>
+				<label for="username"><b>EMAIL / USERNAME</b></label>
+				<input type="text" placeholder="Enter Email / Username" name="username" id="username" class="glowing-border" onkeyup="validate_username()">
+				<label for="password"><b>PASSWORD</b></label>
+				<input type="password" placeholder="Enter Password" name="password" id="password" class="glowing-border" onkeyup="validate_password()">
+				<label for="phonenumber"><b>PHONE NUMBER</b></label>
+				<input type="text" placeholder="Enter Phone Number" name="phonenumber" id="phonenumber" class="glowing-border" onkeyup="validate_phonenumber()">
+				<hr>
+				<input type="submit" class="registerbtn" value="REGISTER" onclick="return validate_all()">
+			</div>
+		</form>
+	</body>
+</html>
