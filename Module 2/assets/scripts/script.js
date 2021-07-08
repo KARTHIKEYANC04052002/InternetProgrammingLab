@@ -1,5 +1,5 @@
 function validate_username() {
-	var username_pat = RegExp("^[a-zA-z][a-zA-z ]*[a-zA-z]$");
+	var username_pat = RegExp("^[a-zA-Z][a-zA-Z ]*[a-zA-Z]$");
 	var username = document.forms[0].username.value;
 	var valid_username = username_pat.exec(username);
 	if (!valid_username) {
