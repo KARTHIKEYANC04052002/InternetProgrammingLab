@@ -16,3 +16,8 @@
   * Transition effects
   * Margin properties
   * Column split (multiple columns)
+## Link to site: [JavaScript Form Validation](https://karthikeyanc04052002.github.io/InternetProgrammingLab/Module%202/EventRegistration.html)
+### Included
+  * Username Validation
+  * Phone Number Validation
+  * Password Validation
