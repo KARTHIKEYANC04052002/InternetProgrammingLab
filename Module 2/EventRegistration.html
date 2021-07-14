@@ -7,17 +7,19 @@
 		<script src="assets/scripts/script.js"></script>
 	</head>
 	<body>
-		<form name = "forms1" action="Registered.html"  method="post">
+		<form name = "forms1" action="registered.html"  method="post">
 			<div class="container">
 				<h1 style="text-align:center; font-family:algerian; font-size:3em;" class="glow">STAR LIGHTS MUSIC EVENT</h1>
 				<h3 style="text-align:center;">REGISTER NOW FOR THE GRAND MUSIC EVENT</h3>
 				<hr>
-				<label for="username"><b>EMAIL / USERNAME</b></label>
-				<input type="text" placeholder="Enter Email / Username" name="username" id="username" class="glowing-border" onkeyup="validate_username()">
+				<label for="username"><b>USERNAME</b></label>
+				<input type="text" placeholder="Enter Username" name="username" id="username" class="glowing-border" onkeyup="validate_username()" required>
+				<label for="email"><b>EMAIL</b></label>
+				<input type="text" placeholder="Enter Email" name="email" id="email" class="glowing-border" onkeyup="validate_email()" required>
 				<label for="password"><b>PASSWORD</b></label>
-				<input type="password" placeholder="Enter Password" name="password" id="password" class="glowing-border" onkeyup="validate_password()">
+				<input type="password" placeholder="Enter Password" name="password" id="password" class="glowing-border" onkeyup="validate_password()" required>
 				<label for="phonenumber"><b>PHONE NUMBER</b></label>
-				<input type="text" placeholder="Enter Phone Number" name="phonenumber" id="phonenumber" class="glowing-border" onkeyup="validate_phonenumber()">
+				<input type="text" placeholder="Enter Phone Number" name="phonenumber" id="phonenumber" class="glowing-border" onkeyup="validate_phonenumber()" required>
 				<hr>
 				<input type="submit" class="registerbtn" value="REGISTER" onclick="return validate_all()">
 			</div>
