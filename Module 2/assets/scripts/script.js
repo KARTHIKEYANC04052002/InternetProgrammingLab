@@ -11,6 +11,19 @@ function validate_username() {
 	}
 }
 
+function validate_email() {
+	var email_pat = RegExp("^([A-Za-z0-9._])+[@]{1}([a-zA-Z_])+[.]{1}([a-zA-Z]){2,3}$");
+	var email = document.forms[0].email.value;
+	var valid_email = email_pat.exec(email);
+	if (!valid_email) {
+		document.getElementById("email").style.border = "2px solid red";
+		return false;
+	} else {
+		document.getElementById("email").style.border = "2px solid green";
+		return true;
+	}
+}
+
 function validate_password() {
 	var password_pat = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*_])(?=.{8,})");
 	var password = document.forms[0].password.value;
@@ -38,6 +51,6 @@ function validate_phonenumber() {
 }
 
 function validate_all() {
-	if (validate_username() && validate_password() && validate_phonenumber()) return true;
+	if (validate_username() && validate_email() && validate_password() && validate_phonenumber()) return true;
 	return false;
 }
