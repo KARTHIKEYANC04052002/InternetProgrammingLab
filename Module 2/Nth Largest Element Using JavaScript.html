@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<link rel=icon href="https://www.vhv.rs/dpng/d/313-3133777_javascript-transparent-background-svg-hd-png-download.png">
+		<title>Nth Largest Element</title>
+		<style>
+			body {
+				background: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+				background-size: 100%;
+				background-repeat: y-axis;
+			}
+
+			div {
+				margin: 15% 15% 0px 15%;
+				color: white;
+				font-size: 30px;
+				font-weight: bold;
+			}
+
+			input {
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body onload = getNthlargest(1)>
+		<div>
+			<p>The array elements are [ 43, 56, 23, 89, 88, 90, 99, 652, 45, 32, 35, 63, 24, 47, 965, 243, 456, 463, 210, 13 ]</p>
+			<label for="N">Enter N : </label><input type="text" name="N" id = "N" onkeyup =  getNthlargest(getN())  placeholder="Enter from 1 to 20">
+			<p id="result"></p>
+		</div>
+		<script>
+			function getN() {
+				var N = document.getElementById("N").value;
+				if (N) {
+					if (N >= 1 && N <= 20)
+						return N;
+					else return 1;
+				} else return 1;
+			}
+
+			function nthlargest(arr, highest) {
+				var x = 0,
+					y = 0,
+					z = 0,
+					temp = 0,
+					len = arr.length,
+					flag = false,
+					result = false;
+
+				while (x < len) {
+					y = x + 1;
+					if (y < len) {
+						for (z = y; z < len; z++) {
+							if (arr[x] < arr[z]) {
+								temp = arr[z];
+								arr[z] = arr[x];
+								arr[x] = temp;
+								flag = true;
+							} else {
+								continue;
+							}
+						}
+					}
+
+					if (flag) {
+						flag = false;
+					} else {
+						x++;
+						if (x === highest) {
+
+							result = true;
+						}
+					}
+					if (result) {
+						break;
+					}
+				}
+
+				return (arr[(highest - 1)]);
+			}
+
+			function getNthlargest(N = 1) {
+				var arr = [43, 56, 23, 89, 88, 90, 99, 652, 45, 32, 35, 63, 24, 47, 965, 243, 456, 463, 210, 13];
+				document.getElementById("result").innerHTML = "The Nth (" + N + ") largest element in the array is " + nthlargest(arr, N);
+			}
+		</script>
+	</body>
+</html>
