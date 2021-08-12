@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Registration Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="assets/images/logo.png">
+		<link rel="stylesheet" href="assets/styles/styles.css">
+	</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<body>
+		<div class="container">
+			<h1 style="text-align:center; font-family:algerian; font-size:3em;" class="glow">ANGULAR FORMS</h1>
+			<div ng-app="myApp" ng-controller="formCtrl">
+				<form novalidate>
+					<label for="user.firstName">First Name:</label><br>
+					<input type="text" ng-model="user.firstName" placeholder="Enter your FirstName" class="glowing-border"><br>
+					<label for="user.lastName">Last Name:</label><br>
+					<input type="text" ng-model="user.lastName" placeholder="Enter your LastName" class="glowing-border"><br>
+					<label for="user.qualification">Qualification:</label><br>
+					<input type="text" ng-model="user.qualification" placeholder="Enter your Qualification" class="glowing-border"><br>
+					<label for="user.areaofinterest">Area of Interest:</label><br>
+					<div ng-model="user.areaofinterest" ng-repeat="area in areas">
+						<input type="radio" value="{{area.area}}" name="area_of_interest" ng-model="area.area" id={{area.area}}>
+						<label for="{{area.area}}">{{area.area}}</label>
+					</div>
+					<br>
+					<label for="user.hobby">Hobby:</label><br>
+					<textarea rows=5 cols=100 ng-model="user.hobby" placeholder="Enter your Hobby" class="glowing-border"></textarea>
+					<br><br>
+					<button ng-click="reset()" class="btn reset">RESET</button>
+					<button ng-click="submit()" class="btn">SUBMIT</button>
+				</form>
+			</div>
+		</div>
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('formCtrl', function ($scope) {
+				$scope.master = {
+					firstName: "",
+					lastName: "",
+					hobby: "",
+					qualification: "",
+				};
+				$scope.areas = [{
+						area: "Data Science"
+					},
+					{
+						area: "Artificial Intelligence"
+					},
+					{
+						area: "Deep Learning"
+					},
+					{
+						area: "Machine Learning"
+					}
+				];
+				$scope.reset = function () {
+					$scope.user = angular.copy($scope.master);
+				};
+				$scope.reset();
+			});
+		</script>
+	</body>
+</html>
