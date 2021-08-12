@@ -23,3 +23,5 @@
   * Password Validation
 ## Assignment 4: [Nth Largest Element Using JavaScript](https://karthikeyanc04052002.github.io/InternetProgrammingLab/Module%202/Nth%20Largest%20Element%20Using%20JavaScript.html)
 ### JavaScript Program to get the Nth Largest Element in the Array
+## Assignment 5: [Forms Using Angular JS](https://karthikeyanc04052002.github.io/InternetProgrammingLab/Module%203/Angular%20Forms.html)
+### Creating forms using Angular JS
